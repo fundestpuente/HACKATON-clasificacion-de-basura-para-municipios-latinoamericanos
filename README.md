@@ -24,7 +24,7 @@ La solución es accesible desde cualquier dispositivo con navegador web, lo que 
 * **Simulador Manual:**  
   Carga de imágenes desde cualquier dispositivo para pruebas, auditoría y validación sin sensores físicos.
 
-* **Validación Humana (Human-in-the-loop):**  
+* **Validación Humana:**  
   Sistema de retroalimentación (Correcto / Incorrecto) que permite mejorar el modelo y generar datos confiables.
 
 * **Base de Datos Histórica:**  
