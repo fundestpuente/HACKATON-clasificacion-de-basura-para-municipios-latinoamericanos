@@ -1,33 +1,59 @@
 # ♻️ CLASIFICACIÓN DE BASURA PARA MUNICIPIOS LATINOAMERICANOS
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![Flask](https://img.shields.io/badge/Backend-Flask-green) ![AI](https://img.shields.io/badge/AI-MobileNetV2-orange)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Flask](https://img.shields.io/badge/Backend-Flask-green)
+![AI](https://img.shields.io/badge/AI-MobileNetV2-orange)
 
 ## 📖 Descripción
-Plataforma de software inteligente para la gestión y clasificación de residuos. Utiliza **Visión Artificial (MobileNetV2)** para identificar objetos reciclables desde imágenes y emplea un sistema de **Active Learning** (Human-in-the-loop) que permite validar las predicciones para mejorar la precisión del sistema y generar estadísticas de impacto ambiental.
+Plataforma de software inteligente para la **clasificación automática de residuos reciclables**, orientada a apoyar a municipios y comunidades latinoamericanas en la correcta separación de desechos.
+
+El sistema utiliza **Visión Artificial con MobileNetV2** para identificar residuos a partir de imágenes y un enfoque de **Active Learning (Human-in-the-Loop)** que permite validar las predicciones, mejorar progresivamente la precisión del modelo y generar **estadísticas reales de impacto ambiental**.
+
+La solución es accesible desde cualquier dispositivo con navegador web, lo que permite su uso inmediato sin necesidad de aplicaciones móviles o infraestructura compleja.
+
+---
 
 ## 🚀 Funcionalidades
-* **Clasificación Automática:** Detecta Plástico, Vidrio, Papel y Metal usando IA.
-* **Dashboard Web:** Interfaz gráfica para visualización de métricas en tiempo real.
-* **Simulador Manual:** Permite cargar imágenes para auditoría sin necesidad de sensores físicos.
-* **Validación Humana:** Sistema de botones (Correcto/Incorrecto) para auditar a la IA y guardar datos reales.
-* **Base de Datos Histórica:** Registro persistente de todas las detecciones en SQLite.
+
+* **Clasificación Automática:**  
+  Identificación de residuos reciclables como **Plástico, Vidrio, Papel/Cartón y Metal** mediante inteligencia artificial.
+
+* **Dashboard Web:**  
+  Visualización clara de métricas y estadísticas en tiempo real para análisis y toma de decisiones.
+
+* **Simulador Manual:**  
+  Carga de imágenes desde cualquier dispositivo para pruebas, auditoría y validación sin sensores físicos.
+
+* **Validación Humana (Human-in-the-loop):**  
+  Sistema de retroalimentación (Correcto / Incorrecto) que permite mejorar el modelo y generar datos confiables.
+
+* **Base de Datos Histórica:**  
+  Registro persistente de todas las detecciones utilizando **SQLite** para análisis posterior.
+
+---
 
 ## 🛠️ Arquitectura del Software
-El proyecto sigue el patrón **MVC (Modelo-Vista-Controlador)**:
+El proyecto sigue el patrón **MVC (Modelo–Vista–Controlador)**:
 
-1.  **Controlador (`app.py`):** Servidor Flask que gestiona la API y el flujo de datos.
-2.  **Modelo (`models.py` & `classifier.py`):**
-    * **IA:** Modelo pre-entrenado MobileNetV2 con pesos de ImageNet.
-    * **DB:** SQLite para almacenamiento de transacciones.
-3.  **Vista (`templates/index.html`):** Dashboard interactivo con Chart.js y Bootstrap.
+1. **Controlador (`app.py`):**  
+   Servidor Flask encargado de la lógica del sistema, API y flujo de datos.
+
+2. **Modelo (`models.py` & `classifier.py`):**  
+   * **IA:** MobileNetV2 preentrenado con pesos de ImageNet.  
+   * **DB:** Base de datos SQLite para almacenamiento de registros.
+
+3. **Vista (`templates/index.html`):**  
+   Dashboard web interactivo desarrollado con **Bootstrap** y **Chart.js**.
+
+---
 
 ## 📂 Estructura del Proyecto
 ```text
-SMART_WASTE_APP/
-├── app.py                 # Servidor Principal
-├── models.py              # Gestión de Base de Datos
-├── requirements.txt       # Dependencias
+CLASIFICACION_DE_BASURA_PROYECTO_HACKATON/
+├── app.py                 # Servidor principal (Flask)
+├── models.py              # Gestión de base de datos
+├── requirements.txt       # Dependencias del proyecto
 ├── utils/
-│   └── classifier.py      # Motor de IA
-├── static/                # Archivos estáticos (CSS, Imágenes subidas)
-└── templates/             # Interfaz de usuario (HTML)
+│   └── classifier.py      # Motor de clasificación con IA
+├── static/                # Archivos estáticos e imágenes
+└── templates/             # Interfaz web (HTML)
