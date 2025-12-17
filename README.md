@@ -1,4 +1,4 @@
-# ♻️ Smart Waste Manager AI
+# ♻️ CLASIFICACIÓN DE BASURA PARA MUNICIPIOS LATINOAMERICANOS
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![Flask](https://img.shields.io/badge/Backend-Flask-green) ![AI](https://img.shields.io/badge/AI-MobileNetV2-orange)
 
